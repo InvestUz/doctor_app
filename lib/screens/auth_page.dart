@@ -1,3 +1,4 @@
+import 'package:doctor_app/components/login_form.dart';
 import 'package:doctor_app/utils/config.dart';
 import 'package:doctor_app/utils/text.dart';
 
@@ -37,6 +38,21 @@ class _AuthPageState extends State<AuthPage> {
                     const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               Config.spaceSmall,
+              LoginForm(),
+              Config.spaceSmall,
+              Center(
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    AppText.enText['forgot_password']!, // Corrected here
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              )
             ],
           ),
         ),
