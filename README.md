@@ -34,4 +34,6 @@ assets:
 ```
 
 
-https://youtu.be/G2vfT9cFENQ?list=PLU6Jd5r98RCnwTpGjREBhAtASx6Cem_EZ&t=1611
+
+
+https://youtu.be/u8kQw2_bu3k?list=PLU6Jd5r98RCnwTpGjREBhAtASx6Cem_EZ&t=2

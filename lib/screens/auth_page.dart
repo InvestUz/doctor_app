@@ -1,4 +1,5 @@
 import 'package:doctor_app/components/login_form.dart';
+import 'package:doctor_app/components/social_button.dart';
 import 'package:doctor_app/utils/config.dart';
 import 'package:doctor_app/utils/text.dart';
 
@@ -53,7 +54,35 @@ class _AuthPageState extends State<AuthPage> {
                   ),
                 ),
               ),
-              
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  SocialButton(social: 'google'),
+                  SocialButton(social: 'facebook')
+                ],
+              ),
+              Config.spaceSmall,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    AppText.enText['signUp_text']!, // Corrected here
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                  const Text(
+                    'Sign Up', // Corrected here
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
