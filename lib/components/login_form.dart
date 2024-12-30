@@ -1,3 +1,4 @@
+import 'package:doctor_app/components/button.dart';
 import 'package:doctor_app/utils/config.dart';
 import 'package:flutter/material.dart';
 
@@ -59,6 +60,13 @@ class _LoginFormState extends State<LoginForm> {
                               Icons.visibility_outlined,
                               color: Config.primaryColor,
                             ))),
+            ),
+            Config.spaceSmall,
+            Button(
+              width: double.infinity,
+              title: 'Login',
+              onPressed: (){},
+              disable: false,
             ),
             Config.spaceSmall,
           ],
