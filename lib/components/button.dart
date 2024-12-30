@@ -1,7 +1,7 @@
 import 'package:doctor_app/utils/config.dart';
 import 'package:flutter/material.dart';
 
-class Button extends StatefulWidget {
+class Button extends StatelessWidget {
   const Button({
     super.key,
     required this.width,
@@ -22,7 +22,7 @@ class Button extends StatefulWidget {
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             backgroundColor: Config.primaryColor,
-            foregroundColor: Colors.white,
+            foregroundColor: Colors.white
           ),
           onPressed: disable ? null : onPressed,
           child: Text(

@@ -38,7 +38,7 @@ class _AuthPageState extends State<AuthPage> {
                     const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               Config.spaceSmall,
-              LoginForm(),
+              const LoginForm(),
               Config.spaceSmall,
               Center(
                 child: TextButton(
@@ -52,7 +52,8 @@ class _AuthPageState extends State<AuthPage> {
                     ),
                   ),
                 ),
-              )
+              ),
+              
             ],
           ),
         ),
