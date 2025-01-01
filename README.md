@@ -36,4 +36,4 @@ assets:
 
 
 
-https://youtu.be/u8kQw2_bu3k?list=PLU6Jd5r98RCnwTpGjREBhAtASx6Cem_EZ&t=2
+https://youtu.be/u8kQw2_bu3k?list=PLU6Jd5r98RCnwTpGjREBhAtASx6Cem_EZ&t=514
