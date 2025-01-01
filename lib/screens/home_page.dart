@@ -1,3 +1,4 @@
+import 'package:doctor_app/components/appointment_card.dart';
 import 'package:doctor_app/utils/config.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -98,13 +99,14 @@ class HomePageState extends State<HomePage> {
               ),
               Config.spaceSmall,
               const Text(
-                'Appintment Today',
+                'Appointment Today',
                 style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               Config.spaceSmall,
+              const AppointmentCard()
             ],
           ),
         ),
