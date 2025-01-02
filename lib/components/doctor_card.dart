@@ -25,7 +25,8 @@ class _DoctorCardState extends State<DoctorCard> {
           child: Row(
             children: [
               SizedBox(
-                width: Config.widthSize * 0.20,
+                // width: Config.widthSize * 0.10,
+                // height: Config.heightSize * 0.10,
                 child: Image.asset(
                   'assets/doctor_2.jpg',
                   fit: BoxFit.fill,
