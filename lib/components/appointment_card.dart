@@ -72,6 +72,9 @@ class _AppointmentCardState extends State<AppointmentCard> {
                       ),
                     ),
                   ),
+                  const SizedBox(
+                    width: 20,
+                  ),
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {},
@@ -141,3 +144,4 @@ class ScheduleCard extends StatelessWidget {
     );
   }
 }
+
