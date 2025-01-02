@@ -155,6 +155,7 @@ class _AppointmentPageState extends State<AppointmentPage> {
                                 backgroundImage:
                                     AssetImage(_schedule['doctor_profile']),
                               ),
+                              const SizedBox(width: 10,),
                               Config.spaceSmall,
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -183,6 +184,43 @@ class _AppointmentPageState extends State<AppointmentPage> {
                           ),
                           const SizedBox(
                             height: 15,
+                          ),
+                          const ScheduleCard(),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Expanded(
+                                child: OutlinedButton(
+                                  onPressed: () {},
+                                  child: const Text(
+                                    'Cancel',
+                                    style: TextStyle(
+                                      color: Config.primaryColor,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 20,
+                              ),
+                              Expanded(
+                                child: OutlinedButton(
+                                  style: OutlinedButton.styleFrom(
+                                    backgroundColor: Config.primaryColor,
+                                  ),
+                                  onPressed: () {},
+                                  child: const Text(
+                                    'Reschedule',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           )
                         ],
                       ),
@@ -193,6 +231,54 @@ class _AppointmentPageState extends State<AppointmentPage> {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class ScheduleCard extends StatelessWidget {
+  const ScheduleCard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.grey.shade100,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      width: double.infinity,
+      padding: const EdgeInsets.all(20),
+      child: const Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Icon(
+            Icons.calendar_today,
+            color: Config.primaryColor,
+            size: 15,
+          ),
+          SizedBox(width: 5),
+          Text(
+            'monday 11/12/2022',
+            style: TextStyle(
+              color: Config.primaryColor,
+            ),
+          ),
+          SizedBox(width: 20),
+          Icon(
+            Icons.access_alarm,
+            color: Config.primaryColor,
+            size: 17,
+          ),
+          SizedBox(width: 5),
+          Flexible(
+              child: Text(
+            '2:00 PM',
+            style: TextStyle(
+              color: Config.primaryColor,
+            ),
+          ))
+        ],
       ),
     );
   }
