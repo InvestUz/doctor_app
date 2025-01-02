@@ -1,4 +1,5 @@
 import 'package:doctor_app/screens/auth_page.dart';
+import 'package:doctor_app/screens/doctor_details.dart';
 import 'package:doctor_app/utils/config.dart';
 import 'package:doctor_app/utils/main_layout.dart';
 import 'package:flutter/material.dart';
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
 
         // main page after auth
         'main': (context) => const MainLayout(),
+        'doc_details': (context) => const DoctorDetails(),
       },
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );

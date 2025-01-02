@@ -121,7 +121,7 @@ class HomePageState extends State<HomePage> {
                 // list of top doctors
                 Column(
                   children: List.generate(10, (index) {
-                    return const DoctorCard();
+                    return DoctorCard(route: 'doc_details');
                   }),
                 )
               ],
