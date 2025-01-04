@@ -1,4 +1,5 @@
-import 'package:doctor_app/components/custom_appbar.dart';
+import 'package:doctor_app/components/button.dart';
+// import 'package:doctor_app/components/custom_appbar.dart';
 import 'package:doctor_app/utils/config.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -32,10 +33,39 @@ class _DoctorDetailsState extends State<DoctorDetails> {
       //         ))
       //   ],
       // ),
-      body: const SafeArea(
+      body: SafeArea(
           child: Column(
         children: <Widget>[
-          AboutDoctor(),
+          const AboutDoctor(),
+          const DetailBody(),
+          const Spacer(),
+          Padding(
+            padding:const  EdgeInsets.all(20),
+            child: Button(
+              width: double.infinity,
+              title: 'book appointment',
+              onPressed: (){},
+              disable: false,
+            ),
+          ),
+          Config.spaceBig,
+          const Text(
+            'about doctor',
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 18,
+            ),
+          ),
+          Config.spaceSmall,
+          const Text(
+            'Dr Abdusattorov has an wonderful experiense, he was born in Uzbekistan and he completed web development course',
+            style: TextStyle(
+              fontWeight: FontWeight.w500,
+              height: 1.5,
+            ),
+            softWrap: true,
+            textAlign: TextAlign.justify,
+          ),
         ],
       )),
     );
