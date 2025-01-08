@@ -114,7 +114,9 @@ class _BookingPageState extends State<BookingPage> {
               child: Button(
                 width: double.infinity,
                 title: 'Make Appointment',
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed('success_page');
+                },
                 disable: _timeSelected && _dateSelected ? false : true,
               ),
             ),
@@ -124,47 +126,42 @@ class _BookingPageState extends State<BookingPage> {
     );
   }
 
-   
   Widget _tableCalendar() {
-  return TableCalendar(
-    focusedDay: _focusDay,
-    firstDay: DateTime.now(),
-    lastDay: DateTime.now().add(const Duration(days: 365)), // 1 year from now
-    calendarFormat: _format,
-    currentDay: _currentDay,
-    rowHeight: 48,
-    calendarStyle: const CalendarStyle(
-      todayDecoration:
-          BoxDecoration(color: Config.primaryColor, shape: BoxShape.circle),
-    ),
-    availableCalendarFormats: const {
-      CalendarFormat.month: 'Month',
-    },
-    onFormatChanged: (format) {
-      setState(() {
-        _format = format;
-      });
-    },
-    onDaySelected: ((selectedDay, focusedDay) {
-      setState(() {
-        _currentDay = selectedDay;
-        _focusDay = focusedDay;
-        _dateSelected = true;
+    return TableCalendar(
+      focusedDay: _focusDay,
+      firstDay: DateTime.now(),
+      lastDay: DateTime.now().add(const Duration(days: 365)), // 1 year from now
+      calendarFormat: _format,
+      currentDay: _currentDay,
+      rowHeight: 48,
+      calendarStyle: const CalendarStyle(
+        todayDecoration:
+            BoxDecoration(color: Config.primaryColor, shape: BoxShape.circle),
+      ),
+      availableCalendarFormats: const {
+        CalendarFormat.month: 'Month',
+      },
+      onFormatChanged: (format) {
+        setState(() {
+          _format = format;
+        });
+      },
+      onDaySelected: ((selectedDay, focusedDay) {
+        setState(() {
+          _currentDay = selectedDay;
+          _focusDay = focusedDay;
+          _dateSelected = true;
 
-        //check if weekend is selected
-        if (selectedDay.weekday == 6 || selectedDay.weekday == 7) {
-          _isWeekend = true;
-          _timeSelected = false;
-          _currentIndex = null;
-        } else {
-          _isWeekend = false;
-        }
-      });
-    }),
-  );
+          //check if weekend is selected
+          if (selectedDay.weekday == 6 || selectedDay.weekday == 7) {
+            _isWeekend = true;
+            _timeSelected = false;
+            _currentIndex = null;
+          } else {
+            _isWeekend = false;
+          }
+        });
+      }),
+    );
+  }
 }
-
-  
-}
-
-
