@@ -36,4 +36,4 @@ assets:
 
 ## Need to fix custom app bar
 
-https://youtu.be/2o6CegO-Jtg?list=PLU6Jd5r98RCnwTpGjREBhAtASx6Cem_EZ&t=578
+https://youtu.be/2o6CegO-Jtg?list=PLU6Jd5r98RCnwTpGjREBhAtASx6Cem_EZ&t=1029
